@@ -1,4 +1,4 @@
-package base;
+package rmi.base;
 
 import java.rmi.Remote;
 

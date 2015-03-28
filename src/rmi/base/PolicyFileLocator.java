@@ -1,15 +1,10 @@
-package base;
+package rmi.base;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-/**
- * class to locate our most "secure" policy file
- * 
- * @author srasul
- * 
- */
+
 public class PolicyFileLocator {
     public static final String POLICY_FILE_NAME = "/allow_all.policy";
     public static String getLocationOfPolicyFile() {
@@ -23,6 +18,7 @@ public class PolicyFileLocator {
             }
             writer.close();
             tempFile.deleteOnExit();
+            
             return tempFile.getAbsolutePath();
         }
         catch(IOException e) {
